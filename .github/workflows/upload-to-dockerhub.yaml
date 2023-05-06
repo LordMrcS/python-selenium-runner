@@ -27,13 +27,6 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v3
-    - name: Set branch-based environment variables
-      uses: iamtheyammer/branch-env-vars@v1.2.1
-      with:
-        TAG: |
-          main:latest
-          php81:php81
-          php74:php74
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@main
       with:
